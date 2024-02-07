@@ -42,6 +42,18 @@ spec:
             type: string
           metadata:
             type: object
+          spec:
+            description: WorkspaceSpec defines the spec of a Workspace
+            properties:
+              visibility:
+                default: private
+                enum:
+                - private
+                - community
+                type: string
+            required:
+            - visibility
+            type: object
           status:
             description: WorkspaceStatus defines the observed state of a Workspace
             properties:
